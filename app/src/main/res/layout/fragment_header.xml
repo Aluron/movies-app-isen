@@ -34,8 +34,9 @@
         android:textColor="@color/colorWhite"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        tools:layout_editor_absoluteY="42dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:text="Developpée par le groupe CONSTRUCTOR" />
 
     <TextView

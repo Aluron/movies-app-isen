@@ -46,6 +46,7 @@
         android:layout_marginEnd="16dp"
         android:text="search"
         android:textColor="@color/colorWhite"
+        android:gravity="center"
         app:layout_constraintEnd_toStartOf="@+id/imageButton2"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -80,13 +81,5 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_tmdb" /><![CDATA[
-
-
-
-
-    >
-
-
-]]>
+        app:srcCompat="@mipmap/ic_tmdb" />
 </android.support.constraint.ConstraintLayout>

@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MoviesAppIsen.iml" filepath="$PROJECT_DIR$/MoviesAppIsen.iml" />
+      <module fileurl="file://C:\Users\aluro\Desktop\Project android\movies-app-isen\MoviesAppIsen.iml" filepath="C:\Users\aluro\Desktop\Project android\movies-app-isen\MoviesAppIsen.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\aluro\Desktop\Project android\movies-app-isen\app\app.iml" filepath="C:\Users\aluro\Desktop\Project android\movies-app-isen\app\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/movies-app-isen.iml" filepath="$PROJECT_DIR$/movies-app-isen.iml" />
     </modules>
   </component>
 </project>

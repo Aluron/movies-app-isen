@@ -12,8 +12,9 @@ public class Crew {
     private String job;
     private String profilePath;
 
-    public Crew(int id) {
+    public Crew(int id, String name) {
         this.id = id;
+        this.name = name;
     }
 
     public int getId() {

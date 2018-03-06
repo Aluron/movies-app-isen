@@ -7,12 +7,12 @@ import java.util.ArrayList;
  */
 
 public class Season {
-    private String airDate;
+    private String air_date;
     private int epCount;
     private final int id;
     private String name;
-    private String posterPath;
-    private int seasonNumber;
+    private String poster_path;
+    private int season_number;
     private ArrayList<Episode> episodes = new ArrayList<Episode>();
 
 
@@ -21,12 +21,12 @@ public class Season {
         this.name = name;
     }
 
-    public String getAirDate() {
-        return airDate;
+    public String getAir_date() {
+        return air_date;
     }
 
-    public void setAirDate(String airDate) {
-        this.airDate = airDate;
+    public void setAir_date(String air_date) {
+        this.air_date = air_date;
     }
 
     public int getEpCount() {
@@ -45,20 +45,20 @@ public class Season {
         this.name = name;
     }
 
-    public String getPosterPath() {
-        return posterPath;
+    public String getPoster_path() {
+        return poster_path;
     }
 
-    public void setPosterPath(String posterPath) {
-        this.posterPath = posterPath;
+    public void setPoster_path(String poster_path) {
+        this.poster_path = poster_path;
     }
 
-    public int getSeasonNumber() {
-        return seasonNumber;
+    public int getSeason_number() {
+        return season_number;
     }
 
-    public void setSeasonNumber(int seasonNumber) {
-        this.seasonNumber = seasonNumber;
+    public void setSeason_number(int season_number) {
+        this.season_number = season_number;
     }
 
     public ArrayList<Episode> getEpisodes() {
@@ -96,5 +96,19 @@ public class Season {
     @Override
     public int hashCode() {
         return id;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Season{" +
+                "air_date='" + air_date + '\'' +
+                ", epCount=" + epCount +
+                ", id=" + id +
+                ", name='" + name + '\'' +
+                ", poster_path='" + poster_path + '\'' +
+                ", season_number=" + season_number +
+                ", episodes=" + episodes +
+                '}';
     }
 }

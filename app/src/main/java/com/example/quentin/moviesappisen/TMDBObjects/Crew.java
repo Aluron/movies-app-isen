@@ -10,7 +10,7 @@ public class Crew {
     private String name;
     private String department;
     private String job;
-    private String profilePath;
+    private String profile_path;
 
     public Crew(int id, String name) {
         this.id = id;
@@ -53,12 +53,12 @@ public class Crew {
         this.job = job;
     }
 
-    public String getProfilePath() {
-        return profilePath;
+    public String getProfile_path() {
+        return profile_path;
     }
 
-    public void setProfilePath(String profilePath) {
-        this.profilePath = profilePath;
+    public void setProfile_path(String profile_path) {
+        this.profile_path = profile_path;
     }
 
     @Override
@@ -74,5 +74,17 @@ public class Crew {
     @Override
     public int hashCode() {
         return id;
+    }
+
+    @Override
+    public String toString() {
+        return "Crew{" +
+                "id=" + id +
+                ", creditId='" + creditId + '\'' +
+                ", name='" + name + '\'' +
+                ", department='" + department + '\'' +
+                ", job='" + job + '\'' +
+                ", profile_path='" + profile_path + '\'' +
+                '}';
     }
 }

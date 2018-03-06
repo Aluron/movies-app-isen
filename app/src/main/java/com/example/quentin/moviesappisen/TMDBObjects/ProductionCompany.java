@@ -39,4 +39,12 @@ public class ProductionCompany {
     public int hashCode() {
         return id;
     }
+
+    @Override
+    public String toString() {
+        return "ProductionCompany{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

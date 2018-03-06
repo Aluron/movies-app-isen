@@ -7,10 +7,10 @@ package com.example.quentin.moviesappisen.TMDBObjects;
 public class GuestStar {
     private final int id;
     private String name;
-    private String creditId;
+    private String credit_id;
     private String character;
     private int order;
-    private String profilePath;
+    private String profile_path;
 
     public GuestStar(int id, String name) {
         this.id = id;
@@ -29,12 +29,12 @@ public class GuestStar {
         this.name = name;
     }
 
-    public String getCreditId() {
-        return creditId;
+    public String getCredit_id() {
+        return credit_id;
     }
 
-    public void setCreditId(String creditId) {
-        this.creditId = creditId;
+    public void setCredit_id(String credit_id) {
+        this.credit_id = credit_id;
     }
 
     public String getCharacter() {
@@ -53,12 +53,12 @@ public class GuestStar {
         this.order = order;
     }
 
-    public String getProfilePath() {
-        return profilePath;
+    public String getProfile_path() {
+        return profile_path;
     }
 
-    public void setProfilePath(String profilePath) {
-        this.profilePath = profilePath;
+    public void setProfile_path(String profile_path) {
+        this.profile_path = profile_path;
     }
 
     @Override
@@ -74,5 +74,17 @@ public class GuestStar {
     @Override
     public int hashCode() {
         return id;
+    }
+
+    @Override
+    public String toString() {
+        return "GuestStar{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", credit_id='" + credit_id + '\'' +
+                ", character='" + character + '\'' +
+                ", order=" + order +
+                ", profile_path='" + profile_path + '\'' +
+                '}';
     }
 }

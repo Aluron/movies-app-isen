@@ -39,4 +39,12 @@ public class TVNetwork {
     public int hashCode() {
         return id;
     }
+
+    @Override
+    public String toString() {
+        return "TVNetwork{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

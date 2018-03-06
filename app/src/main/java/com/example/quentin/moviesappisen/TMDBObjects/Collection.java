@@ -10,8 +10,8 @@ public class Collection {
     private final int id;
     private String name;
     private String overview;
-    private String backdropPath;
-    private ArrayList<Movie> movies = new ArrayList<Movie>();
+    private String backdrop_path;
+    private ArrayList<Movie> parts = new ArrayList<Movie>();
 
     public Collection(int id) {
         this.id = id;
@@ -37,30 +37,30 @@ public class Collection {
         this.overview = overview;
     }
 
-    public String getBackdropPath() {
-        return backdropPath;
+    public String getBackdrop_path() {
+        return backdrop_path;
     }
 
-    public void setBackdropPath(String backdropPath) {
-        this.backdropPath = backdropPath;
+    public void setBackdrop_path(String backdrop_path) {
+        this.backdrop_path = backdrop_path;
     }
 
-    public ArrayList<Movie> getMovies() {
-        return movies;
+    public ArrayList<Movie> getParts() {
+        return parts;
     }
 
-    public void setMovies(ArrayList<Movie> movies) {
-        this.movies = movies;
+    public void setParts(ArrayList<Movie> parts) {
+        this.parts = parts;
     }
 
     public void addMovie(Movie movie) {
-        if(!this.movies.contains((Movie) movie)) {
-            this.movies.add(movie);
+        if(!this.parts.contains((Movie) movie)) {
+            this.parts.add(movie);
         }
     }
 
     public void removeMovie(Movie movie) {
-        this.movies.remove(movie);
+        this.parts.remove(movie);
     }
 
     @Override
@@ -76,5 +76,16 @@ public class Collection {
     @Override
     public int hashCode() {
         return id;
+    }
+
+    @Override
+    public String toString() {
+        return "Collection{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", overview='" + overview + '\'' +
+                ", backdrop_path='" + backdrop_path + '\'' +
+                ", parts=" + parts +
+                '}';
     }
 }

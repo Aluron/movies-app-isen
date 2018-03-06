@@ -12,11 +12,11 @@ public class People {
     private int gender;
     private String homepage;
     private final int id;
-    private String imdbId;
+    private String imdb_id;
     private String name;
-    private String placeOfBirth;
+    private String place_of_birth;
     private float popularity;
-    private String profilePath;
+    private String profile_path;
 
     public People(int id, String name) {
         this.id = id;
@@ -75,12 +75,12 @@ public class People {
         return id;
     }
 
-    public String getImdbId() {
-        return imdbId;
+    public String getImdb_id() {
+        return imdb_id;
     }
 
-    public void setImdbId(String imdbId) {
-        this.imdbId = imdbId;
+    public void setImdb_id(String imdb_id) {
+        this.imdb_id = imdb_id;
     }
 
     public String getName() {
@@ -91,12 +91,12 @@ public class People {
         this.name = name;
     }
 
-    public String getPlaceOfBirth() {
-        return placeOfBirth;
+    public String getPlace_of_birth() {
+        return place_of_birth;
     }
 
-    public void setPlaceOfBirth(String placeOfBirth) {
-        this.placeOfBirth = placeOfBirth;
+    public void setPlace_of_birth(String place_of_birth) {
+        this.place_of_birth = place_of_birth;
     }
 
     public float getPopularity() {
@@ -107,12 +107,12 @@ public class People {
         this.popularity = popularity;
     }
 
-    public String getProfilePath() {
-        return profilePath;
+    public String getProfile_path() {
+        return profile_path;
     }
 
-    public void setProfilePath(String profilePath) {
-        this.profilePath = profilePath;
+    public void setProfile_path(String profile_path) {
+        this.profile_path = profile_path;
     }
 
     @Override
@@ -128,5 +128,23 @@ public class People {
     @Override
     public int hashCode() {
         return id;
+    }
+
+    @Override
+    public String toString() {
+        return "People{" +
+                "adult=" + adult +
+                ", biography='" + biography + '\'' +
+                ", birthday='" + birthday + '\'' +
+                ", deathday='" + deathday + '\'' +
+                ", gender=" + gender +
+                ", homepage='" + homepage + '\'' +
+                ", id=" + id +
+                ", imdb_id='" + imdb_id + '\'' +
+                ", name='" + name + '\'' +
+                ", place_of_birth='" + place_of_birth + '\'' +
+                ", popularity=" + popularity +
+                ", profile_path='" + profile_path + '\'' +
+                '}';
     }
 }

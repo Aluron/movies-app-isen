@@ -4,20 +4,18 @@ import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 
-import java.util.Date;
-
 /**
  * Created by Remi on 01/03/2018.
  */
 
-@Entity
+@Entity(tableName = "movies")
 public class Movie {
 
     @PrimaryKey(autoGenerate = true)
-    public long id;
+    public long _ID;
 
     @ColumnInfo
-    public String imdbId;
+    public String imdb_id;
 
     @ColumnInfo
     public String title;

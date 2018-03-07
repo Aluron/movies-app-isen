@@ -1,9 +1,6 @@
 package com.example.quentin.moviesappisen.TMDB.TMDBAPIRequests;
 
-import android.util.Log;
-
 import com.example.quentin.moviesappisen.TMDB.Constants;
-import com.example.quentin.moviesappisen.TMDB.TMDBObjects.Configurations.Configuration;
 import com.example.quentin.moviesappisen.TMDB.TMDBObjects.Episode;
 import com.example.quentin.moviesappisen.TMDB.TMDBObjects.Movie;
 import com.example.quentin.moviesappisen.TMDB.TMDBObjects.Season;
@@ -29,20 +26,6 @@ public class QueryInfos extends AbstractRequest{
         mListener = listener;
     }
 
-    /**
-     * send a request to TMDB API to get current configuration
-     * configuration contains valid images formats and the list of change keys
-     * answer is given by callback to method onConfigurationReceived
-     */
-    public void getConfiguration() {
-        Type objectAnswerType = Configuration.class;
-        String request = Constants.API_URL +
-                "configuration?api_key=" + Constants.API_KEY;
-
-        TMDBAsyncQuery query = new TMDBAsyncQuery(this, request, objectAnswerType);
-
-        query.execute();
-    }
 
     /**
      * send a request to TMDB API to get details on a movie based on its id
@@ -129,7 +112,6 @@ public class QueryInfos extends AbstractRequest{
             case "tvshow"           :   mListener.onTVShowReceived((TVShow) object);    break;
             case "season"           :   mListener.onTVSeasonReceived((Season) object);  break;
             case "episode"          :   mListener.onTVEpisodeReceived((Episode) object);break;
-            case "configuration"    :   mListener.onConfigurationReceived();            break;
         }
     }
 }

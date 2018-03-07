@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity implements AbstractRequest.o
         //instantiates a class to request infos on a specific object (Movie, TVShow, TVShow season, TVShow episode)
         QueryInfos request = new QueryInfos(this);
 
-
         //start a QueryInfos, which will start an asynctask to get answer for the id given in parameter
         request.getMovieDetails(123);
         request.getMovieDetails(19995);
@@ -48,15 +47,12 @@ public class MainActivity extends AppCompatActivity implements AbstractRequest.o
         request.getTVSeasonDetails(456, 2);
         request.getTVEpisodeDetails(456, 3, 6);
 
-
-        /*
         //instantiates a class to start search queries on Movies, TVShows, Collections and People
         QuerySearch search = new QuerySearch(this);
         search.searchMovies("Avatar", false, null, null, null, null, null);
         search.searchCollections("the lord of the rings", null, null);
         search.searchPeople("katy perry", false, null, null, null);
         search.searchTVShows("breaking bad", null, null, null);
-        */
 
         QueryDiscover queryDiscover = new QueryDiscover(this);
         queryDiscover.getMovieDiscover(null, null , null);

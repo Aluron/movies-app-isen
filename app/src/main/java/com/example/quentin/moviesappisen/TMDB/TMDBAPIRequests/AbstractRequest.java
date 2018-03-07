@@ -15,7 +15,10 @@ import java.util.ArrayList;
 
 public abstract class AbstractRequest {
 
-    //this interface must be implemented in the class which creates a QueryInfos instance to get answer from query
+
+    /**
+     * this interface must be implemented in the class which creates a QueryInfos instance to get answer from query
+     */
     public interface onObjectReceived {
         public void onConfigurationReceived();
         public void onMovieReceived(Movie movie);
@@ -24,13 +27,21 @@ public abstract class AbstractRequest {
         public void onTVEpisodeReceived(Episode episode);
     }
 
-    //this interface must be implemented in the class which creates a QuerySearch instance to get answer from query
+    /**
+     * this interface must be implemented in the class which creates a QuerySearch instance to get answer from query
+     */
     public interface onSearchResultReceived {
         public void onCollectionListReceived(ArrayList<Collection> collections);
         public void onMovieListReceived(ArrayList<Movie> movies);
         public void onPeopleListReceived(ArrayList<People> persons);
         public void onTVShowListReceived(ArrayList<TVShow> tvShows);
     }
+
+    public interface onDiscoverResultReceived {
+        public void onMovieDiscoverReceived(ArrayList<Movie> movies);
+        public void onTVShowDiscoverReceived(ArrayList<TVShow> tvShows);
+    }
+
 
     public abstract void onRequestReceived(Object object);
 

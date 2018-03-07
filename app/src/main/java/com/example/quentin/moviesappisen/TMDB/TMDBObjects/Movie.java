@@ -25,7 +25,7 @@ public class Movie {
     public String release_date;
     public Long revenue;
     public int runtime;
-    public Language spoken_languages;
+    public ArrayList<Language> spoken_languages = new ArrayList<Language>();
     public String status;
     public String tagline;
     public String title;

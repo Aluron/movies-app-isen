@@ -32,6 +32,7 @@ public class Movie {
     public boolean video;
     public float vote_average;
     public float vote_count;
+    public Videos videos;
 
 
     public Movie(int id, String title) {
@@ -82,6 +83,7 @@ public class Movie {
                 ", video=" + video +
                 ", vote_average=" + vote_average +
                 ", vote_count=" + vote_count +
+                ", videos=" + videos +
                 '}';
     }
 }

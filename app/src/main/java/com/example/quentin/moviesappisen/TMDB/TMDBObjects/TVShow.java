@@ -33,6 +33,7 @@ public class TVShow {
     public String type;
     public float vote_average;
     public int vote_count;
+    public Videos videos;
 
 
     public TVShow(int id, String name) {
@@ -84,6 +85,7 @@ public class TVShow {
                 ", type='" + type + '\'' +
                 ", vote_average=" + vote_average +
                 ", vote_count=" + vote_count +
+                ", videos=" + videos +
                 '}';
     }
 }

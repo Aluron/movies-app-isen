@@ -53,7 +53,8 @@ public class QueryInfos extends AbstractRequest{
         Type objectAnswerType = Movie.class;
         String request = Constants.API_URL +
                 "movie/" + Integer.toString(id) +
-                "?api_key=" + Constants.API_KEY;
+                "?api_key=" + Constants.API_KEY
+                +"&append_to_response=videos";
 
         TMDBAsyncQuery query = new TMDBAsyncQuery(this, request, objectAnswerType);
 
@@ -69,7 +70,8 @@ public class QueryInfos extends AbstractRequest{
         Type objectAnswerType = TVShow.class;
         String request = Constants.API_URL +
                 "tv/" + Integer.toString(id) +
-                "?api_key=" + Constants.API_KEY;
+                "?api_key=" + Constants.API_KEY
+                +"&append_to_response=videos";
 
         TMDBAsyncQuery query = new TMDBAsyncQuery(this, request, objectAnswerType);
 

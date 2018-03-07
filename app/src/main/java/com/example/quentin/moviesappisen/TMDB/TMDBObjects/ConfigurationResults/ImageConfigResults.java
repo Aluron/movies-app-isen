@@ -1,4 +1,4 @@
-package com.example.quentin.moviesappisen.TMDB.TMDBObjects.Configurations;
+package com.example.quentin.moviesappisen.TMDB.TMDBObjects.ConfigurationResults;
 
 import java.util.ArrayList;
 
@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by theo on 06/03/2018.
  */
 
-public final class ImageConfigs {
+public class ImageConfigResults {
 
     public String base_url;
     public String secure_base_url;

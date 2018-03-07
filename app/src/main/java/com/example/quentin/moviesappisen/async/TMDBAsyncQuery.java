@@ -47,12 +47,10 @@ public class TMDBAsyncQuery extends AsyncTask<Void, Void, Object>{
             connection.setRequestMethod("GET");
             connection.setRequestProperty("Content-Type", "application/json");
 
-            Integer responseCode = connection.getResponseCode();
-            Log.d(this.getClass().getSimpleName(), "response code : " + responseCode.toString());
+            int responseCode = connection.getResponseCode();
+            Log.d(this.getClass().getSimpleName(), "response code : " + Integer.toString(responseCode));
             if(responseCode == 200) {
                 return new Gson().fromJson(new InputStreamReader(connection.getInputStream(), "UTF-8"), objectAnswerType);
-
-
             }
         } catch (IOException e) {
             e.printStackTrace();

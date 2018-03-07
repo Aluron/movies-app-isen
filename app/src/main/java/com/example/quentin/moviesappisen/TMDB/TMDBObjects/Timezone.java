@@ -10,4 +10,12 @@ public class Timezone {
 
     public String iso_3166_1;
     public ArrayList<String> zones;
+
+    @Override
+    public String toString() {
+        return "Timezone{" +
+                "iso_3166_1='" + iso_3166_1 + '\'' +
+                ", zones=" + zones +
+                '}';
+    }
 }

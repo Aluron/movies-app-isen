@@ -3,6 +3,7 @@ package com.example.quentin.moviesappisen.TMDB.TMDBAPIRequests;
 
 import android.util.Log;
 
+import com.example.quentin.moviesappisen.TMDB.Configuration;
 import com.example.quentin.moviesappisen.TMDB.Constants;
 import com.example.quentin.moviesappisen.TMDB.TMDBObjects.SearchResults.CollectionResult;
 import com.example.quentin.moviesappisen.TMDB.TMDBObjects.SearchResults.MovieResult;
@@ -45,7 +46,9 @@ public class QuerySearch extends AbstractRequest {
                     "search/collection?api_key=" + Constants.API_KEY +
                     "&query=" + URLEncoder.encode(searchQuery, "UTF-8");
             if(language != null)
-                request += "&language=" + language;
+                if(!Configuration.languages_list.isEmpty())
+                    if(Configuration.languages_list.contains(language))
+                        request += "&language=" + language;
             if(page != null)
                 request += "&page=" + page.toString();
 
@@ -78,11 +81,15 @@ public class QuerySearch extends AbstractRequest {
             if(page != null)
                 request += "&page=" + page.toString();
             if(language != null)
-                request += "&page=" + language;
+                if(!Configuration.languages_list.isEmpty())
+                    if(Configuration.languages_list.contains(language))
+                        request += "&language=" + language;
             if(include_adult)
                 request += "&include_adult=true";
             if(region != null)
-                request += "&region=" + region;
+                if(!Configuration.timezones_list.isEmpty())
+                    if(Configuration.timezones_list.contains(region))
+                        request += "&region=" + region;
             if(year != null)
                 request += "&year=" + year.toString();
             if(primary_release_year != null)
@@ -113,13 +120,17 @@ public class QuerySearch extends AbstractRequest {
                     "search/person?api_key=" + Constants.API_KEY +
                     "&query=" + URLEncoder.encode(searchQuery, "UTF-8");
             if(language != null)
-                request += "&language=" + language;
+                if(!Configuration.languages_list.isEmpty())
+                    if(Configuration.languages_list.contains(language))
+                        request += "&language=" + language;
             if(page != null)
                 request += "&page=" + page.toString();
             if(include_adult)
                 request += "&include_adult=true";
             if(region != null)
-                request += "&region=" + region;
+                if(!Configuration.timezones_list.isEmpty())
+                    if(Configuration.timezones_list.contains(region))
+                        request += "&region=" + region;
 
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -145,7 +156,9 @@ public class QuerySearch extends AbstractRequest {
                     "search/tv?api_key=" + Constants.API_KEY +
                     "&query=" + URLEncoder.encode(searchQuery, "UTF-8");
             if(language != null)
-                request += "&language=" + language;
+                if(!Configuration.languages_list.isEmpty())
+                    if(Configuration.languages_list.contains(language))
+                        request += "&language=" + language;
             if(page != null)
                 request += "&page=" + page.toString();
             if(first_air_date != null)

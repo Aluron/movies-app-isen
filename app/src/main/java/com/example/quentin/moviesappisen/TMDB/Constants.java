@@ -1,4 +1,4 @@
-package com.example.quentin.moviesappisen.TMDBAPIRequests;
+package com.example.quentin.moviesappisen.TMDB;
 
 /**
  * Created by theo on 05/03/2018.

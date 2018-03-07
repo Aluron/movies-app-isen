@@ -20,7 +20,7 @@ import java.net.URLEncoder;
 
 public class QuerySearch extends AbstractRequest {
 
-    onSearchResultReceived mListener;
+    private onSearchResultReceived mListener;
 
     /**
      * sends a search query to TMDB API for specific TMDB objects
@@ -163,6 +163,8 @@ public class QuerySearch extends AbstractRequest {
      * treats the answer given directly by TMDBAsyncQuery
      * will call the corresponding callback on listener if a valid object is received
      * @param object
+     * at the moment, the callbacks don't get the full result objects but just the ArrayList,
+     * meaning there is no knowledge of the number of pages and the current page being returned
      */
     @Override
     public void onRequestReceived(Object object) {

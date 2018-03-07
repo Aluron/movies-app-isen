@@ -19,7 +19,7 @@ import java.lang.reflect.Type;
 
 public class QueryInfos extends AbstractRequest{
 
-    onObjectReceived mListener;
+    private onObjectReceived mListener;
 
     /**
      * sends queries to TMDB API on a specific object (Movie, TVShow, season...)

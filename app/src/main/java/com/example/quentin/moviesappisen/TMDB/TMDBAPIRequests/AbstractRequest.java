@@ -37,6 +37,9 @@ public abstract class AbstractRequest {
         public void onTVShowListReceived(ArrayList<TVShow> tvShows);
     }
 
+    /**
+     * this interface must be implemented in the class which creates a QueryDiscover instance to get answer from query
+     */
     public interface onDiscoverResultReceived {
         public void onMovieDiscoverReceived(ArrayList<Movie> movies);
         public void onTVShowDiscoverReceived(ArrayList<TVShow> tvShows);

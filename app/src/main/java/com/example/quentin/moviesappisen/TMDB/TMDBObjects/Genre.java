@@ -1,27 +1,15 @@
-package com.example.quentin.moviesappisen.TMDBObjects;
+package com.example.quentin.moviesappisen.TMDB.TMDBObjects;
 
 /**
  * Created by theo on 01/03/2018.
  */
 
-public class TVNetwork {
-    private final int id;
-    private String name;
+public class Genre {
+    public final int id;
+    public String name;
 
-    public TVNetwork(int id, String name) {
+    public Genre(int id, String name) {
         this.id = id;
-        this.name = name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
         this.name = name;
     }
 
@@ -30,9 +18,9 @@ public class TVNetwork {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        TVNetwork tvNetwork = (TVNetwork) o;
+        Genre genre = (Genre) o;
 
-        return id == tvNetwork.id;
+        return id == genre.id;
     }
 
     @Override
@@ -42,7 +30,7 @@ public class TVNetwork {
 
     @Override
     public String toString() {
-        return "TVNetwork{" +
+        return "Genre{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';

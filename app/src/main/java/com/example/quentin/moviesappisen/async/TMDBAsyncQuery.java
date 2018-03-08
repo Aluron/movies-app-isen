@@ -3,14 +3,12 @@ package com.example.quentin.moviesappisen.async;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.example.quentin.moviesappisen.MainActivity;
-import com.example.quentin.moviesappisen.TMDBAPIRequests.Constants;
-import com.example.quentin.moviesappisen.TMDBAPIRequests.Request;
-import com.example.quentin.moviesappisen.TMDBObjects.Movie;
+import com.example.quentin.moviesappisen.TMDB.TMDBAPIRequests.AbstractRequest;
 import com.google.gson.Gson;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -20,37 +18,39 @@ import java.net.URL;
 
 public class TMDBAsyncQuery extends AsyncTask<Void, Void, Object>{
 
-    Request mListener;
+    AbstractRequest mListener;
+    String request;
+    Type objectAnswerType;
 
 
-    public TMDBAsyncQuery(Request listener){
+
+    public TMDBAsyncQuery(AbstractRequest listener, String request, Type objectAnswerType){
         mListener = listener;
+        this.request = request;
+        this.objectAnswerType = objectAnswerType;
+
     }
+
 
     @Override
     protected Object doInBackground(Void... Void) {
-
-        String request = mListener.request;
-        Class objectAnswerType = mListener.objectAnswerType;
 
         URL requestUrl;
         HttpURLConnection connection;
 
 
         try {
-            requestUrl = new URL(Constants.API_URL + request + "?api_key=" + Constants.API_KEY);
+            requestUrl = new URL(request);
             Log.d(this.getClass().getSimpleName(), "request : " + requestUrl.toString());
 
             connection = (HttpURLConnection) requestUrl.openConnection();
             connection.setRequestMethod("GET");
             connection.setRequestProperty("Content-Type", "application/json");
 
-            Integer responseCode = connection.getResponseCode();
-            Log.d(this.getClass().getSimpleName(), "response code : " + responseCode.toString());
+            int responseCode = connection.getResponseCode();
+            Log.d(this.getClass().getSimpleName(), "response code : " + Integer.toString(responseCode));
             if(responseCode == 200) {
                 return new Gson().fromJson(new InputStreamReader(connection.getInputStream(), "UTF-8"), objectAnswerType);
-
-
             }
         } catch (IOException e) {
             e.printStackTrace();

@@ -12,7 +12,7 @@
         android:layout_height="5dp"
         android:layout_weight="1"
         android:text="           Film tendance au cinerma"
-        android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
+
         android:textColor="@color/colorWhite" />
 
     <LinearLayout
@@ -98,7 +98,6 @@
         android:layout_height="4dp"
         android:layout_weight="1"
         android:text="           Film par catégorie"
-        android:textAppearance="@android:style/TextAppearance.Widget.ActionBar.Title"
         android:textColor="@color/colorWhite" />
 
     <LinearLayout

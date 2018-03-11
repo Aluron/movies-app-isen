@@ -1,5 +1,9 @@
 package com.example.quentin.moviesappisen.database;
 
+import android.database.Cursor;
+
+import com.example.quentin.moviesappisen.TMDB.TMDBObjects.Movie;
+
 import static android.provider.BaseColumns._ID;
 
 /**
@@ -18,4 +22,26 @@ public class DBContract {
     public static final String COLUMN_POPULARITY = "popularity";
     public static final String COLUMN_RELEASE_DATE = "release_date";
     public static final String COLUMN_TRAILER = "trailer";
+
+    public static Movie movieFromCursor(Cursor c){
+        if (null != c){
+            int id = c.getInt(c.getColumnIndex(COLUMN_ID));
+            String title = c.getString(c.getColumnIndex(COLUMN_TITLE));
+
+            final Movie movie = new Movie(id, title);
+
+            // Retrieve the date of release
+            if (c.getColumnIndex(COLUMN_RELEASE_DATE) >= 0){
+                movie.release_date = c.getString(c.getColumnIndex(COLUMN_RELEASE_DATE));
+            }
+
+            // Retrieve the description
+            if (c.getColumnIndex(COLUMN_OVERVIEW) >= 0){
+                movie.overview = c.getString(c.getColumnIndex(COLUMN_OVERVIEW));
+            }
+
+            return movie;
+        }
+        return null;
+    }
 }

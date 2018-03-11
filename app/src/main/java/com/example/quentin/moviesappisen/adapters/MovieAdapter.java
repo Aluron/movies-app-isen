@@ -1,44 +1,40 @@
 package com.example.quentin.moviesappisen.adapters;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.quentin.moviesappisen.R;
-import com.example.quentin.moviesappisen.pojo.Movie;
+import com.example.quentin.moviesappisen.TMDB.TMDBObjects.Movie;
+import com.example.quentin.moviesappisen.async.DownloadTMDBImageQuery;
 
-import java.util.List;
+import java.util.ArrayList;
 
 /**
- * Created by Remi on 06/03/2018.
+ * Created by Remi on 10/03/2018.
  */
 
 public class MovieAdapter extends BaseAdapter {
-    private List<Movie> mMovies;
-    LayoutInflater mInflater;
-    Context context;
+    private ArrayList<Movie> movies;
+    private LayoutInflater mInflater;
 
-    public MovieAdapter(List<Movie> movies, Context context) {
-        mMovies = movies;
-
+    public MovieAdapter(ArrayList<Movie> movies, Context context) {
+        this.movies = movies;
         mInflater = LayoutInflater.from(context);
-
-        this.context = context;
     }
 
     @Override
     public int getCount() {
-        return null != mMovies ? mMovies.size() : 0;
+        return null != movies ? movies.size() : 0;
     }
 
     @Override
     public Object getItem(int i) {
-        return null != mMovies ? mMovies.get(i) : null;
+        return null != movies ? movies.get(i) : null;
     }
 
     @Override
@@ -48,17 +44,30 @@ public class MovieAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        //TODO Set View
-
         final ViewHolder holder;
 
-        return null;
-    }
-
-    private class ViewHolder {
-
-        public ViewHolder(View view) {
-
+        if(null == view){
+            view = mInflater.inflate(R.layout.filmlist_adapter, null);
+            holder = new ViewHolder(view);
+            view.setTag(holder);
         }
+        else{
+            holder = (ViewHolder) view.getTag();
+        }
+
+        final Movie movie = (Movie) getItem(i);
+
+        holder.title.setText(movie.title);
+        holder.year.setText(movie.release_date);
+
+        /* DownloadTMDBImageQuery imageQuery = new DownloadTMDBImageQuery(new DownloadTMDBImageQuery.onImageReceived() {
+            @Override
+            public void processBitmap(Bitmap bitmap) {
+                holder.poster.setImageBitmap(bitmap);
+            }
+        });
+        imageQuery.execute("/" + movie.poster_path + ".png"); */
+
+        return view;
     }
 }

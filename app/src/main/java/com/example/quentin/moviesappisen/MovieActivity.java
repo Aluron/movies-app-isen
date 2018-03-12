@@ -15,7 +15,7 @@ import com.example.quentin.moviesappisen.TMDB.TMDBObjects.Season;
 import com.example.quentin.moviesappisen.TMDB.TMDBObjects.TVShow;
 import com.example.quentin.moviesappisen.async.DownloadTMDBImageQuery;
 
-import static com.example.quentin.moviesappisen.SearchActivity.MOVIE_ID;
+import static com.example.quentin.moviesappisen.SearchMovieActivity.MOVIE_ID;
 
 public class MovieActivity extends AppCompatActivity implements AbstractRequest.onObjectReceived {
 

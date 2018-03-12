@@ -1,8 +1,10 @@
 package com.example.quentin.moviesappisen;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,7 +24,7 @@ public class HomeActivity extends AppCompatActivity implements AbstractRequest.o
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home);
+        setContentView(R.layout.activity_home);
 
         discover = new QueryDiscover(this);
         discover.getMovieDiscover("popularity.desc", null, null);
@@ -55,4 +57,10 @@ public class HomeActivity extends AppCompatActivity implements AbstractRequest.o
     public void onTVShowDiscoverReceived(ArrayList<TVShow> tvShows) {
 
     }
+
+    public void searchMovies(View view){
+        startActivity(new Intent(this, SearchMovieActivity.class));
+    }
+
+    public void searchShows(View view){}
 }

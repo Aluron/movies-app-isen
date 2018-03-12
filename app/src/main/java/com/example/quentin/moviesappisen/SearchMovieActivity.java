@@ -1,7 +1,6 @@
 package com.example.quentin.moviesappisen;
 
 import android.app.SearchManager;
-import android.arch.persistence.room.Room;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -11,15 +10,12 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.SearchView;
 
-import com.example.quentin.moviesappisen.TMDB.DemoTMDBAPIRequests;
 import com.example.quentin.moviesappisen.TMDB.TMDBObjects.Movie;
-import com.example.quentin.moviesappisen.database.AppDatabase;
-import com.example.quentin.moviesappisen.fragments.MovieFragment;
 import com.example.quentin.moviesappisen.fragments.MoviesFragment;
 import com.example.quentin.moviesappisen.interfaces.MovieListener;
 
 
-public class SearchActivity extends AppCompatActivity implements MovieListener, SearchView.OnQueryTextListener {
+public class SearchMovieActivity extends AppCompatActivity implements MovieListener, SearchView.OnQueryTextListener {
 
     public final static String MOVIE_ID = "com.example.quentin.moviesappisen.ID";
     public final static String SEARCH = "com.example.quentin.moviesappisen.SEARCH";
@@ -28,7 +24,7 @@ public class SearchActivity extends AppCompatActivity implements MovieListener, 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_search_movie);
     }
 
 

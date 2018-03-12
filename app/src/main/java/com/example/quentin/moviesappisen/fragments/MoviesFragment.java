@@ -25,7 +25,7 @@ import com.example.quentin.moviesappisen.interfaces.MovieListener;
 
 import java.util.ArrayList;
 
-import static com.example.quentin.moviesappisen.SearchActivity.SEARCH;
+import static com.example.quentin.moviesappisen.SearchMovieActivity.SEARCH;
 
 /**
  * Created by Remi on 10/03/2018.

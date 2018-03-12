@@ -9,8 +9,7 @@
     <TextView
         android:id="@+id/movieTrends"
         android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:text="@string/movieTrends"
         android:textColor="@color/colorWhite" />
 
@@ -20,68 +19,74 @@
         android:layout_height="220dp"
         android:orientation="horizontal">
 
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/movieTrend1"
             android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/movieTrendPoster1"
-                android:layout_width="match_parent"
-                android:layout_height="112dp" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
 
             <TextView
                 android:id="@+id/movieTrendTitle1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textAlignment="center"
-                android:textColor="@color/colorWhite" />
+                android:textColor="@color/colorWhite"
+                android:layout_below="@+id/movieTrendPoster1"
+                android:layout_centerHorizontal="true"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/movieTrend2"
             android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/movieTrendPoster2"
-                android:layout_width="match_parent"
-                android:layout_height="112dp" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
 
             <TextView
                 android:id="@+id/movieTrendTitle2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textAlignment="center"
-                android:textColor="@color/colorWhite" />
+                android:textColor="@color/colorWhite"
+                android:layout_below="@+id/movieTrendPoster2"
+                android:layout_centerHorizontal="true"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/movieTrend3"
             android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/movieTrendPoster3"
-                android:layout_width="match_parent"
-                android:layout_height="112dp" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
 
             <TextView
                 android:id="@+id/movieTrendTitle3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textAlignment="center"
-                android:textColor="@color/colorWhite" />
+                android:textColor="@color/colorWhite"
+                android:layout_below="@+id/movieTrendPoster3"
+                android:layout_centerHorizontal="true"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
     </LinearLayout>
 
@@ -97,8 +102,7 @@
     <TextView
         android:id="@+id/showTrends"
         android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:text="@string/showTrends"
         android:textColor="@color/colorWhite" />
 
@@ -108,68 +112,74 @@
         android:layout_height="220dp"
         android:orientation="horizontal">
 
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/showTrend1"
             android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/showTrendPoster1"
-                android:layout_width="match_parent"
-                android:layout_height="112dp" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
 
             <TextView
                 android:id="@+id/showTrendTitle1"
                 android:layout_width="match_parent"
-                android:layout_height="109dp"
+                android:layout_height="match_parent"
                 android:textAlignment="center"
-                android:textColor="@color/colorWhite" />
+                android:textColor="@color/colorWhite"
+                android:layout_below="@+id/showTrendPoster1"
+                android:layout_centerHorizontal="true"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/showTrend2"
             android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/showTrendPoster2"
-                android:layout_width="match_parent"
-                android:layout_height="112dp" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
 
             <TextView
                 android:id="@+id/showTrendTitle2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textColor="@color/colorWhite" />
+                android:textColor="@color/colorWhite"
+                android:layout_below="@+id/showTrendPoster2"
+                android:layout_centerHorizontal="true"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/showTrend3"
             android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/showTrendPoster3"
-                android:layout_width="match_parent"
-                android:layout_height="112dp" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
 
             <TextView
                 android:id="@+id/showTrendTitle3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textAlignment="center"
-                android:textColor="@color/colorWhite" />
+                android:textColor="@color/colorWhite"
+                android:layout_below="@+id/showTrendPoster3"
+                android:layout_centerHorizontal="true"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
     </LinearLayout>
 

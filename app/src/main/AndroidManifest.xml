@@ -11,13 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SearchMovieActivity" >
-
+        <activity android:name=".SearchMovieActivity">
             <meta-data
                 android:name="android.app.searchable"
-                android:resource="@xml/searchable">
-            </meta-data>
-
+                android:resource="@xml/searchable" />
         </activity>
         <activity android:name=".MovieActivity" />
         <activity android:name=".HomeActivity">
@@ -27,6 +24,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SearchShowActivity" />
+        <activity android:name=".TVShowActivity"></activity>
     </application>
 
 </manifest>
